@@ -73,7 +73,7 @@ std::string CMovieScenes::getUniqueKey()
   char key[16];
 
   for (;; ++scene_counter) {
-    sprintf(key, "%03d", scene_counter);
+    snprintf(key, "%03d", scene_counter);
 
     if (dict.find(key) == dict.end())
       return key;
